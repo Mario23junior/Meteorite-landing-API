@@ -1,6 +1,7 @@
-package com.project.meteorito.model;
+package com.project.meteorito.dto;
 
-public class Metricas {
+ 
+public class MetricasDTO {
 
 	private String fall;
 	private Integer year;
@@ -8,7 +9,7 @@ public class Metricas {
 	private Double reclong;
 	private String GeoLocation;
 
-	public Metricas() {
+	public MetricasDTO() {
 		// TODO Auto-generated constructor stub
 	}
 

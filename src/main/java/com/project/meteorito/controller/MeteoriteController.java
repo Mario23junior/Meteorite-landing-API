@@ -20,10 +20,7 @@ public class MeteoriteController {
 	}
 	
 	@GetMapping
-	private ObjectMapper listAll() throws IOException {
-		return service.listAllMetorite();
+  	private ObjectMapper listAll() throws IOException {
+		 return service.listAllMetorite();
 	}
-	
-	
-
 }

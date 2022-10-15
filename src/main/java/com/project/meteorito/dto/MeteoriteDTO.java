@@ -1,9 +1,10 @@
-package com.project.meteorito.model;
+package com.project.meteorito.dto;
 
 import com.opencsv.bean.CsvRecurse;
+import com.project.meteorito.model.Metricas;
 
-public class Meteorite {
-
+public class MeteoriteDTO {
+  
 	private Long id;
 	private String name;
 	private String nametype;
@@ -13,7 +14,7 @@ public class Meteorite {
 	@CsvRecurse
 	private Metricas metricas;
 
-	public Meteorite() {
+	public MeteoriteDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -70,5 +71,4 @@ public class Meteorite {
 		return "Meteorite [id=" + id + ", name=" + name + ", nametype=" + nametype + ", recclass=" + recclass
 				+ ", massG=" + massG + ", metricas=" + metricas + "]";
 	}
-
 }
