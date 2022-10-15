@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import com.opencsv.bean.CsvRecurse;
 
+ 
 public class Meteorite implements Serializable {
 
 	private static final long serialVersionUID = 1L;

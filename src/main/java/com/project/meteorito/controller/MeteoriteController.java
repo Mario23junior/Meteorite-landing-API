@@ -1,13 +1,12 @@
 package com.project.meteorito.controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.project.meteorito.model.Meteorite;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.project.meteorito.service.MeteoriteService;
 
 @RestController
@@ -21,7 +20,7 @@ public class MeteoriteController {
 	}
 	
 	@GetMapping
-	private List<Meteorite> listAll() throws IOException {
+	private ObjectMapper listAll() throws IOException {
 		return service.listAllMetorite();
 	}
 	
