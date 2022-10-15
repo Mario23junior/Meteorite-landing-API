@@ -60,10 +60,20 @@ public class Meteorite implements Serializable {
 		this.massG = massG;
 	}
 
+	public Metricas getMetricas() {
+		return metricas;
+	}
+
+	public void setMetricas(Metricas metricas) {
+		this.metricas = metricas;
+	}
+
 	@Override
 	public String toString() {
 		return "Meteorite [id=" + id + ", name=" + name + ", nametype=" + nametype + ", recclass=" + recclass
-				+ ", massG=" + massG + "]";
+				+ ", massG=" + massG + ", metricas=" + metricas + "]";
 	}
+
+	 
 
 }
