@@ -1,7 +1,5 @@
 package com.project.meteorito.model;
 
-import com.opencsv.bean.CsvRecurse;
-
 public class Metricas {
 
 	private String fall;
@@ -9,9 +7,6 @@ public class Metricas {
 	private Double reclat;
 	private Double reclong;
 	private String GeoLocation;
-
-	@CsvRecurse
-	private Metricas metricas;
 
 	public Metricas() {
 		// TODO Auto-generated constructor stub
@@ -57,18 +52,13 @@ public class Metricas {
 		GeoLocation = geoLocation;
 	}
 
-	public Metricas getMetricas() {
-		return metricas;
-	}
-
-	public void setMetricas(Metricas metricas) {
-		this.metricas = metricas;
-	}
-
 	@Override
 	public String toString() {
 		return "Metricas [fall=" + fall + ", year=" + year + ", reclat=" + reclat + ", reclong=" + reclong
-				+ ", GeoLocation=" + GeoLocation + ", metricas=" + metricas + "]";
+				+ ", GeoLocation=" + GeoLocation + "]";
 	}
+
+	 
+	 
 
 }

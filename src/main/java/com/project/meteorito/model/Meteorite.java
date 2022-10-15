@@ -2,6 +2,8 @@ package com.project.meteorito.model;
 
 import java.io.Serializable;
 
+import com.opencsv.bean.CsvRecurse;
+
 public class Meteorite implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -10,6 +12,9 @@ public class Meteorite implements Serializable {
 	private String nametype;
 	private String recclass;
 	private String massG;
+	
+	@CsvRecurse
+	private Metricas metricas;
 
 	public Meteorite() {
 		// TODO Auto-generated constructor stub
