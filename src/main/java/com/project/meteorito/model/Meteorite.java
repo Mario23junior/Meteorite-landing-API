@@ -16,6 +16,22 @@ public class Meteorite {
 	public Meteorite() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+
+
+	public Meteorite(Long id, String name, String nametype, String recclass, String massG, Metricas metricas) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.nametype = nametype;
+		this.recclass = recclass;
+		this.massG = massG;
+		this.metricas = metricas;
+	}
+
+
+
 
 	public Long getId() {
 		return id;

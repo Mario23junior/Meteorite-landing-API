@@ -1,12 +1,13 @@
 package com.project.meteorito.model;
 
 public class Metricas {
-
+ 
 	private String fall;
 	private Integer year;
 	private Double reclat;
 	private Double reclong;
 	private String GeoLocation;
+	
 
 	public Metricas() {
 		// TODO Auto-generated constructor stub
