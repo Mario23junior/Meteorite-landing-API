@@ -21,8 +21,8 @@ import com.project.meteorito.model.Meteorite;
 public class MeteoriteService {
 
 	@Autowired
-//	private ModelMapper mapperToDto;
-	private ObjectMapper mapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
+ 	private ObjectMapper mapper = new ObjectMapper()
+ 	.enable(SerializationFeature.INDENT_OUTPUT);
 
 	public String listAllMetorite() throws IOException {
 		Reader reader = Files.newBufferedReader(Paths.get("src/main/resources/Meteorite_Landings.csv"));
@@ -33,6 +33,24 @@ public class MeteoriteService {
 		List<Meteorite> database = new ArrayList<>(listAll.parse())
 				.stream()
 				.collect(Collectors.toList());
+		
+		String jsonInString = mapper.writeValueAsString(database);
+		System.out.println(jsonInString);
+		
+		return jsonInString;	
+	}
+	
+	public String listIdMeteorit(Long id) throws IOException {
+		Reader reader = Files.newBufferedReader(Paths.get("src/main/resources/Meteorite_Landings.csv"));
+		CsvToBean<Meteorite> listAll = new CsvToBeanBuilder<Meteorite>(reader)
+				.withType(Meteorite.class)
+				.build();
+		
+ 		
+		List<Meteorite> database = new ArrayList<>(listAll.parse())
+				.stream()
+				.filter(a -> a.getId().equals(id))
+ 				.collect(Collectors.toList());
 		
 		String jsonInString = mapper.writeValueAsString(database);
 		System.out.println(jsonInString);
