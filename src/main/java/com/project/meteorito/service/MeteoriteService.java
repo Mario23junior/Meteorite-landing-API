@@ -34,7 +34,7 @@ public class MeteoriteService {
 				.stream()
 				.collect(Collectors.toList());
 		
-		String jsonInString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(database);
+		String jsonInString = mapper.writeValueAsString(database);
 		System.out.println(jsonInString);
 		
 		return jsonInString;	

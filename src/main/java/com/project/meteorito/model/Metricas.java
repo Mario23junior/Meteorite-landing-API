@@ -8,9 +8,7 @@ public class Metricas {
 	private Double reclong;
 	private String GeoLocation;
 
-	public Metricas() {
-		// TODO Auto-generated constructor stub
-	}
+ 
 
 	public String getFall() {
 		return fall;

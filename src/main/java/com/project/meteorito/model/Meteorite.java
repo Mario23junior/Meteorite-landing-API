@@ -1,10 +1,5 @@
 package com.project.meteorito.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.opencsv.bean.CsvRecurse;
-
 public class Meteorite {
 
 	private Long id;
@@ -13,13 +8,55 @@ public class Meteorite {
 	private String recclass;
 	private String massG;
 
-	@CsvRecurse
-	private List<Metricas> metricas = new ArrayList<>();
+	private String fall;
+	private Integer year;
+	private Double reclat;
+	private Double reclong;
+	private String GeoLocation;
+
+	public String getFall() {
+		return fall;
+	}
+
+	public void setFall(String fall) {
+		this.fall = fall;
+	}
+
+	public Integer getYear() {
+		return year;
+	}
+
+	public void setYear(Integer year) {
+		this.year = year;
+	}
+
+	public Double getReclat() {
+		return reclat;
+	}
+
+	public void setReclat(Double reclat) {
+		this.reclat = reclat;
+	}
+
+	public Double getReclong() {
+		return reclong;
+	}
+
+	public void setReclong(Double reclong) {
+		this.reclong = reclong;
+	}
+
+	public String getGeoLocation() {
+		return GeoLocation;
+	}
+
+	public void setGeoLocation(String geoLocation) {
+		GeoLocation = geoLocation;
+	}
 
 	public Meteorite() {
 		// TODO Auto-generated constructor stub
 	}
-  
 
 	public Long getId() {
 		return id;
@@ -61,18 +98,11 @@ public class Meteorite {
 		this.massG = massG;
 	}
 
-	public List<Metricas> getMetricas() {
-		return metricas;
-	}
-
-	public void setMetricas(List<Metricas> metricas) {
-		this.metricas = metricas;
-	}
-
 	@Override
 	public String toString() {
 		return "Meteorite [id=" + id + ", name=" + name + ", nametype=" + nametype + ", recclass=" + recclass
-				+ ", massG=" + massG + ", metricas=" + metricas + "]";
+				+ ", massG=" + massG + ", fall=" + fall + ", year=" + year + ", reclat=" + reclat + ", reclong="
+				+ reclong + ", GeoLocation=" + GeoLocation + "]";
 	}
 
 }
