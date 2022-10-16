@@ -1,5 +1,8 @@
 package com.project.meteorito.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.opencsv.bean.CsvRecurse;
 
 public class Meteorite {
@@ -11,27 +14,12 @@ public class Meteorite {
 	private String massG;
 
 	@CsvRecurse
-	private Metricas metricas;
+	private List<Metricas> metricas = new ArrayList<>();
 
 	public Meteorite() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-
-
-	public Meteorite(Long id, String name, String nametype, String recclass, String massG, Metricas metricas) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.nametype = nametype;
-		this.recclass = recclass;
-		this.massG = massG;
-		this.metricas = metricas;
-	}
-
-
-
+  
 
 	public Long getId() {
 		return id;
@@ -73,11 +61,11 @@ public class Meteorite {
 		this.massG = massG;
 	}
 
-	public Metricas getMetricas() {
+	public List<Metricas> getMetricas() {
 		return metricas;
 	}
 
-	public void setMetricas(Metricas metricas) {
+	public void setMetricas(List<Metricas> metricas) {
 		this.metricas = metricas;
 	}
 

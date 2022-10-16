@@ -1,5 +1,8 @@
 package com.project.meteorito.dto;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.opencsv.bean.CsvRecurse;
 
 public class MeteoriteDTO {
@@ -11,7 +14,7 @@ public class MeteoriteDTO {
 	private String massG;
 
 	@CsvRecurse
-	private MetricasDTO metricas;
+	private List<MetricasDTO> metricas = new ArrayList<>();
 
 	public MeteoriteDTO() {
 		// TODO Auto-generated constructor stub
@@ -57,11 +60,11 @@ public class MeteoriteDTO {
 		this.massG = massG;
 	}
 
-	public MetricasDTO getMetricas() {
+	public List<MetricasDTO> getMetricas() {
 		return metricas;
 	}
 
-	public void setMetricas(MetricasDTO metricas) {
+	public void setMetricas(List<MetricasDTO> metricas) {
 		this.metricas = metricas;
 	}
 
@@ -70,7 +73,5 @@ public class MeteoriteDTO {
 		return "MeteoriteDTO [id=" + id + ", name=" + name + ", nametype=" + nametype + ", recclass=" + recclass
 				+ ", massG=" + massG + ", metricas=" + metricas + "]";
 	}
-
- 	
 
 }

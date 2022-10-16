@@ -2,12 +2,11 @@ package com.project.meteorito.controller;
 
  import java.io.IOException;
 
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.project.meteorito.dto.MeteoriteDTO;
 import com.project.meteorito.service.MeteoriteService;
 
 @RestController
@@ -20,8 +19,8 @@ public class MeteoriteController {
  		this.service = service;
 	}
 	
-	@GetMapping
-  	private ResponseEntity<MeteoriteDTO> listAll() throws IOException {
+	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+  	private String listAll() throws IOException {
 		 return service.listAllMetorite();
 	}
 }
