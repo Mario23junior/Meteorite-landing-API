@@ -55,6 +55,6 @@ public class MeteoriteService {
 		String jsonInString = mapper.writeValueAsString(database);
 		System.out.println(jsonInString);
 		
-		return jsonInString;	
+		return (String)jsonInString;	
 	}
 }

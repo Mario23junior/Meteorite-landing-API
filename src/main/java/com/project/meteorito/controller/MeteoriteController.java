@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.project.meteorito.service.MeteoriteService;
 
 @RestController
-@RequestMapping("/api/v1/meteorite/listall/")
+@RequestMapping("/api/v1/meteorite/")
 public class MeteoriteController {
 
 	private MeteoriteService service;
@@ -22,5 +22,10 @@ public class MeteoriteController {
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
   	private String listAll() throws IOException {
 		 return service.listAllMetorite();
+	}
+	
+	@GetMapping("{id}")
+	private String ListById(Long id) throws IOException {
+		return service.listIdMeteorit(id);
 	}
 }
