@@ -1,11 +1,8 @@
 package com.project.meteorito.model;
 
-import com.opencsv.bean.CsvBindByPosition;
-
 public class Meteorite {
 
-	@CsvBindByPosition(position = 0)
-	private Long id;
+ 	private Long id;
 	private String name;
 	private String nametype;
 	private String recclass;

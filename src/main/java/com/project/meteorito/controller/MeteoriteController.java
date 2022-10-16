@@ -1,12 +1,14 @@
 package com.project.meteorito.controller;
 
  import java.io.IOException;
+import java.util.List;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.project.meteorito.model.Meteorite;
 import com.project.meteorito.service.MeteoriteService;
 
 @RestController
@@ -24,8 +26,12 @@ public class MeteoriteController {
 		 return service.listAllMetorite();
 	}
 	
+	
 	@GetMapping("{id}")
-	private String ListById(Long id) throws IOException {
-		return service.listIdMeteorit(id);
+//	@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+  	private List<Meteorite> listId(Long id) throws IOException {
+		 return service.listId(id);
 	}
-}
+	
+	
+ }

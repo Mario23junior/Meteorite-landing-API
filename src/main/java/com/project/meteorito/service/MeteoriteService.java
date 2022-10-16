@@ -21,40 +21,38 @@ import com.project.meteorito.model.Meteorite;
 public class MeteoriteService {
 
 	@Autowired
- 	private ObjectMapper mapper = new ObjectMapper()
- 	.enable(SerializationFeature.INDENT_OUTPUT);
+//	private ModelMapper mapperToDto;
+	private ObjectMapper mapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
 
 	public String listAllMetorite() throws IOException {
 		Reader reader = Files.newBufferedReader(Paths.get("src/main/resources/Meteorite_Landings.csv"));
 		CsvToBean<Meteorite> listAll = new CsvToBeanBuilder<Meteorite>(reader)
 				.withType(Meteorite.class)
 				.build();
-		
+
 		List<Meteorite> database = new ArrayList<>(listAll.parse())
 				.stream()
 				.collect(Collectors.toList());
 		
-		String jsonInString = mapper.writeValueAsString(database);
+		String jsonInString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(database);
 		System.out.println(jsonInString);
 		
 		return jsonInString;	
 	}
 	
-	public String listIdMeteorit(Long id) throws IOException {
+	
+	public List<Meteorite> listId(Long id) throws IOException {
 		Reader reader = Files.newBufferedReader(Paths.get("src/main/resources/Meteorite_Landings.csv"));
-		CsvToBean<Meteorite> listAll = new CsvToBeanBuilder<Meteorite>(reader)
+ 		
+		CsvToBean<Meteorite> meteorito = new CsvToBeanBuilder(reader)
 				.withType(Meteorite.class)
 				.build();
 		
- 		
-		List<Meteorite> database = new ArrayList<>(listAll.parse())
-				.stream()
-				.filter(a -> a.getId().equals(id))
- 				.collect(Collectors.toList());
+		List<Meteorite> meteoritBundle = meteorito.parse();
 		
-		String jsonInString = mapper.writeValueAsString(database);
-		System.out.println(jsonInString);
-		
-		return (String)jsonInString;	
+		for(Meteorite bundle : meteoritBundle) {
+			System.out.println(bundle.getId());
+		}
+		return null;
 	}
 }
