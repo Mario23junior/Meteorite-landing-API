@@ -1,6 +1,7 @@
 package com.project.meteorito.controller;
 
  import java.io.IOException;
+import java.util.List;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +23,7 @@ public class MeteoriteController {
 	}
 	
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-  	private String listAll() throws IOException {
+  	private List<Meteorite> listAll() throws IOException {
 		 return service.listAllMetorite();
 	}
 	
