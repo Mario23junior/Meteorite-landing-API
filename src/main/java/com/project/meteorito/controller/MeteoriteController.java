@@ -1,10 +1,10 @@
 package com.project.meteorito.controller;
 
  import java.io.IOException;
-import java.util.List;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,8 +28,7 @@ public class MeteoriteController {
 	
 	
 	@GetMapping("{id}")
-//	@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-  	private List<Meteorite> listId(Long id) throws IOException {
+   	private Meteorite listId(@PathVariable Integer id) throws IOException {
 		 return service.listId(id);
 	}
 	

@@ -2,7 +2,7 @@ package com.project.meteorito.model;
 
 public class Meteorite {
 
- 	private Long id;
+ 	private Integer id;
 	private String name;
 	private String nametype;
 	private String recclass;
@@ -58,11 +58,12 @@ public class Meteorite {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Long getId() {
+ 
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

@@ -41,18 +41,14 @@ public class MeteoriteService {
 	}
 	
 	
-	public List<Meteorite> listId(Long id) throws IOException {
+ 	public Meteorite listId(int id) throws IOException {
 		Reader reader = Files.newBufferedReader(Paths.get("src/main/resources/Meteorite_Landings.csv"));
  		
-		CsvToBean<Meteorite> meteorito = new CsvToBeanBuilder(reader)
+		CsvToBean<Meteorite> meteorito = new CsvToBeanBuilder<Meteorite>(reader)
 				.withType(Meteorite.class)
 				.build();
 		
 		List<Meteorite> meteoritBundle = meteorito.parse();
-		
-		for(Meteorite bundle : meteoritBundle) {
-			System.out.println(bundle.getId());
-		}
-		return null;
+ 		return meteoritBundle.get(id);
 	}
 }
