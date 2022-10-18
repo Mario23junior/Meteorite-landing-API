@@ -1,11 +1,22 @@
 package com.project.meteorito.model;
 
+import com.opencsv.bean.CsvBindByName;
+
 public class Metricas {
 
+    @CsvBindByName(column = "fall")
 	private String fall;
+    
+    @CsvBindByName(column = "year")
 	private Integer year;
+    
+    @CsvBindByName(column = "reclat")
 	private Double reclat;
+    
+    @CsvBindByName(column = "reclong")
 	private Double reclong;
+    
+    @CsvBindByName(column = "GeoLocation")
 	private String GeoLocation;
 
  
