@@ -1,6 +1,6 @@
 package com.project.meteorito.controller;
 
- import java.io.IOException;
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.http.MediaType;
@@ -19,19 +19,17 @@ public class MeteoriteController {
 	private MeteoriteService service;
 
 	public MeteoriteController(MeteoriteService service) {
- 		this.service = service;
+		this.service = service;
 	}
-	
+
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-  	private List<Meteorite> listAll() throws IOException {
-		 return service.listAllMetorite();
+	private List<Meteorite> listAll() throws IOException {
+		return service.listAllMetorite();
 	}
-	
-	
+
 	@GetMapping("{id}")
-   	private Meteorite listId(@PathVariable Integer id) throws IOException {
-		 return service.listId(id);
+	private Meteorite listId(@PathVariable Integer id) throws IOException {
+		return service.listId(id);
 	}
-	
-	
- }
+
+}
