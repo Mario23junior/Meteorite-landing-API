@@ -1,10 +1,15 @@
-<p align="center"><img src="img/logo-api.gif" width = "723px" height="333px"></p>
+<p align="center"><img src="/logo/logo.gif" width = "623px" height="533px"></p>
 
 <h1 align="center">Registro de meteoritos </h1>
 
 <h5 align="center">
 Este conjunto de dados abrangente da The Meteoritical Society contém informações sobre todos os desembarques de meteoritos conhecidos. A Fusion Table é coletada por Javier de la Torre e também fornecemos um arquivo XLS que consiste em 34.513 meteoritos<a href="https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh" target="_blank"> NASA </a>
- e <a href="https://data.nasa.gov/data_visualizations.html" target="_blank">NASA's Open Data Portal </a>Os cientistas estimam que 44 toneladas (44.000 kg, cerca de 48,5 toneladas) de material meteorítico caem na Terra a cada dia. Vários meteoros por hora geralmente podem ser vistos em qualquer noite. Às vezes, o número aumenta drasticamente - esses eventos são chamados de chuvas de meteoros. Alguns ocorrem anualmente ou em intervalos regulares à medida que a Terra passa pelo rastro de detritos empoeirados deixados por um cometa. As chuvas de meteoros geralmente recebem o nome de uma estrela ou constelação que está perto de onde os meteoros aparecem no céu. Talvez as mais famosas sejam as Perseidas, que atingem o pico por volta de 12 de agosto de cada ano. Cada meteoro Perseida é um pequeno pedaço do cometa Swift-Tuttle, que passa pelo Sol a cada 135 anos. Outras chuvas de meteoros e seus cometas associados são os Leonids (Tempel-Tuttle), os Aquarids e Orionids (Halley) e os Taurids (Encke). A maior parte da poeira de cometas em chuvas de meteoros queima na atmosfera antes de atingir o solo; alguma poeira é capturada por aeronaves de alta altitude e analisada nos laboratórios da NASA.
+ e <a href="https://data.nasa.gov/data_visualizations.html" target="_blank">NASA's Open Data Portal </a>Os cientistas estimam que 44 toneladas (44.000 kg, cerca de 48,5 toneladas) de material meteorítico caem na Terra a cada dia. 
+
+<br>
+Vários meteoros por hora geralmente podem ser vistos em qualquer noite. Às vezes, o número aumenta drasticamente - esses eventos são chamados de chuvas de meteoros. Alguns ocorrem anualmente ou em intervalos regulares à medida que a Terra passa pelo rastro de detritos empoeirados deixados por um cometa. 
+<br/>
+As chuvas de meteoros geralmente recebem o nome de uma estrela ou constelação que está perto de onde os meteoros aparecem no céu. Talvez as mais famosas sejam as Perseidas, que atingem o pico por volta de 12 de agosto de cada ano. Cada meteoro Perseida é um pequeno pedaço do cometa Swift-Tuttle, que passa pelo Sol a cada 135 anos. Outras chuvas de meteoros e seus cometas associados são os Leonids (Tempel-Tuttle), os Aquarids e Orionids (Halley) e os Taurids (Encke). A maior parte da poeira de cometas em chuvas de meteoros queima na atmosfera antes de atingir o solo; alguma poeira é capturada por aeronaves de alta altitude e analisada nos laboratórios da NASA.
 <p align="center">
  
 <a href="[![Meteorito API Build]](https://github.com/Mario23junior/Meteorite-landing-API/actions/workflows/maven.yml)" target="_blank"><img src="https://github.com/Mario23junior/Meteorite-landing-API/actions/workflows/maven.yml/badge.svg?branch=main"> <a href="https://en.wikipedia.org/wiki/Representational_state_transfer"><img src="https://img.shields.io/badge/interface-REST-brightgreen.svg?longCache=true&style=flat-square" target="_blank"></a>
