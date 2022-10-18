@@ -401,3 +401,8 @@ http://localhost:8080/api/v1/meteorite/
 ]
 
 ```
+ 
+##References
+https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh
+<br>
+http://solarsystem.nasa.gov/planets/meteors/indepth
