@@ -26,7 +26,6 @@ public class MeteoriteService {
 			CsvToBean<Meteorite> listAll = new CsvToBeanBuilder<Meteorite>(reader)
 					.withType(Meteorite.class)
 					.build();
-
 			List<Meteorite> database = new ArrayList<>(listAll.parse());
 			return database;
 		} catch (IOException e) {
@@ -39,15 +38,14 @@ public class MeteoriteService {
 		Reader reader;
 		try {
 			reader = Files.newBufferedReader(Paths.get("src/main/resources/Meteorite_Landings.csv"));
-			
 			CsvToBean<Meteorite> meteorito = new CsvToBeanBuilder<Meteorite>(reader)
 					.withType(Meteorite.class)
 					.build();
-			
 			List<Meteorite> meteoritBundle = meteorito.parse();
 	 		return meteoritBundle.get(id);
 		} catch (IOException e) {
- 		  throw new ExceptionsErroImpact("ID "+id+" não encontrado por favor tente novamente.");
+ 		  throw new ExceptionsErroImpact("ID "+id+" não encontrado po"
+ 		  		+ " favor tente novamente.");
 		}
 		
 	}
